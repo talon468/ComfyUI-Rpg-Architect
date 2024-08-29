@@ -1,0 +1,850 @@
+{
+  "last_node_id": 61,
+  "last_link_id": 78,
+  "nodes": [
+    {
+      "id": 25,
+      "type": "VAEDecode",
+      "pos": [
+        3212.0117617452997,
+        794.9273721313725
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 33,
+      "type": "BasicGuider",
+      "pos": [
+        3002.0117617452997,
+        794.9273721313725
+      ],
+      "size": {
+        "0": 241.79998779296875,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null,
+          "slot_index": 0
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": null,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      }
+    },
+    {
+      "id": 46,
+      "type": "DualCLIPLoader",
+      "pos": [
+        473,
+        175
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            61,
+            75
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DualCLIPLoader"
+      },
+      "widgets_values": [
+        "clip_l.safetensors",
+        "t5xxl_fp16.safetensors",
+        "flux"
+      ]
+    },
+    {
+      "id": 51,
+      "type": "BasicGuider",
+      "pos": [
+        1028,
+        232
+      ],
+      "size": {
+        "0": 241.79998779296875,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 74,
+          "slot_index": 0
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 59,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            53
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      }
+    },
+    {
+      "id": 47,
+      "type": "UNETLoader",
+      "pos": [
+        467,
+        54
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            57,
+            74
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "flux1-dev-fp8.safetensors",
+        "fp8_e4m3fn"
+      ]
+    },
+    {
+      "id": 44,
+      "type": "SaveImage",
+      "pos": [
+        1196,
+        45
+      ],
+      "size": {
+        "0": 1084.4117431640625,
+        "1": 1155.6217041015625
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 51
+        }
+      ],
+      "title": "Save Image 1",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "MyFluxWorkflow\\Rpg-Architect\\rpg"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "VAELoader",
+      "pos": [
+        818,
+        422
+      ],
+      "size": {
+        "0": 341.49676513671875,
+        "1": 60.627037048339844
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            50
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "ae.sft"
+      ]
+    },
+    {
+      "id": 43,
+      "type": "VAEDecode",
+      "pos": [
+        1024,
+        532
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 49
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            51
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 50,
+      "type": "BasicScheduler",
+      "pos": [
+        856,
+        681
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 57,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            55
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "simple",
+        20,
+        1
+      ]
+    },
+    {
+      "id": 49,
+      "type": "KSamplerSelect",
+      "pos": [
+        862,
+        583
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            54
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler"
+      ]
+    },
+    {
+      "id": 61,
+      "type": "SDXLEmptyLatentSizePicker+",
+      "pos": [
+        477,
+        318
+      ],
+      "size": {
+        "0": 315,
+        "1": 170
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            76
+          ],
+          "shape": 3
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXLEmptyLatentSizePicker+"
+      },
+      "widgets_values": [
+        "1024x1024 (1.0)",
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 52,
+      "type": "RandomNoise",
+      "pos": [
+        484,
+        529
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            52
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        122644144710431,
+        "randomize"
+      ]
+    },
+    {
+      "id": 55,
+      "type": "CLIPTextEncode",
+      "pos": [
+        804,
+        229
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 61,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "blurry",
+        true
+      ]
+    },
+    {
+      "id": 48,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        817,
+        263
+      ],
+      "size": {
+        "0": 335.2677307128906,
+        "1": 120.23948669433594
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 52,
+          "slot_index": 0
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 53,
+          "slot_index": 1
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 54,
+          "slot_index": 2
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 55,
+          "slot_index": 3
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 76,
+          "slot_index": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            49
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      }
+    },
+    {
+      "id": 57,
+      "type": "CLIPTextEncodeFlux",
+      "pos": [
+        795,
+        47
+      ],
+      "size": {
+        "0": 383.28955078125,
+        "1": 135.49830627441406
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 75
+        },
+        {
+          "name": "t5xxl",
+          "type": "STRING",
+          "link": 77,
+          "widget": {
+            "name": "t5xxl"
+          }
+        },
+        {
+          "name": "clip_l",
+          "type": "STRING",
+          "link": 78,
+          "widget": {
+            "name": "clip_l"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            59
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeFlux"
+      },
+      "widgets_values": [
+        "In this extraordinary hyper-realistic oil painting by TomeLee, a powerful barbarian rider dominates the scene atop his muscular black horse, both exuding raw strength and readiness for battle. The rider, with his bare torso and detailed leather attire, holds an ornate sword and a battle axe, ready to strike. The horse, adorned with medieval-style armor and a wild, untamed look, adds to the drama of the scene.\n",
+        "In this extraordinary hyper-realistic oil painting by TomeLee, a powerful barbarian rider dominates the scene atop his muscular black horse, both exuding raw strength and readiness for battle. The rider, with his bare torso and detailed leather attire, holds an ornate sword and a battle axe, ready to strike. The horse, adorned with medieval-style armor and a wild, untamed look, adds to the drama of the scene.\n",
+        2,
+        true,
+        true
+      ]
+    },
+    {
+      "id": 19,
+      "type": "ShowText|pysssss",
+      "pos": [
+        90,
+        350
+      ],
+      "size": {
+        "0": 374.19354248046875,
+        "1": 174.29830932617188
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 21,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            77,
+            78
+          ],
+          "shape": 6,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "24K UHD Photograph of A middle-aged male. Elf. Cleric. Specialized armor designed for spellcasters, providing both protection and magical enhancements.. Using healing magic or potion. A dense forest filled with tall trees, undergrowth, and the sounds of wildlife."
+      ]
+    },
+    {
+      "id": 5,
+      "type": "ComfyUI Rpg Architect 🪄",
+      "pos": [
+        84,
+        64
+      ],
+      "size": {
+        "0": 375.33184814453125,
+        "1": 244
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            21
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ComfyUI Rpg Architect 🪄"
+      },
+      "widgets_values": [
+        "",
+        "Middle-Aged Male",
+        "Elf",
+        "Cleric",
+        "Battle Mage Armor",
+        "Heal",
+        "Forest",
+        "None"
+      ]
+    }
+  ],
+  "links": [
+    [
+      21,
+      5,
+      0,
+      19,
+      0,
+      "STRING"
+    ],
+    [
+      49,
+      48,
+      0,
+      43,
+      0,
+      "LATENT"
+    ],
+    [
+      50,
+      45,
+      0,
+      43,
+      1,
+      "VAE"
+    ],
+    [
+      51,
+      43,
+      0,
+      44,
+      0,
+      "IMAGE"
+    ],
+    [
+      52,
+      52,
+      0,
+      48,
+      0,
+      "NOISE"
+    ],
+    [
+      53,
+      51,
+      0,
+      48,
+      1,
+      "GUIDER"
+    ],
+    [
+      54,
+      49,
+      0,
+      48,
+      2,
+      "SAMPLER"
+    ],
+    [
+      55,
+      50,
+      0,
+      48,
+      3,
+      "SIGMAS"
+    ],
+    [
+      57,
+      47,
+      0,
+      50,
+      0,
+      "MODEL"
+    ],
+    [
+      59,
+      57,
+      0,
+      51,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      61,
+      46,
+      0,
+      55,
+      0,
+      "CLIP"
+    ],
+    [
+      74,
+      47,
+      0,
+      51,
+      0,
+      "MODEL"
+    ],
+    [
+      75,
+      46,
+      0,
+      57,
+      0,
+      "CLIP"
+    ],
+    [
+      76,
+      61,
+      0,
+      48,
+      4,
+      "LATENT"
+    ],
+    [
+      77,
+      19,
+      0,
+      57,
+      1,
+      "STRING"
+    ],
+    [
+      78,
+      19,
+      0,
+      57,
+      2,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8264462809917358,
+      "offset": [
+        -18.05020392047343,
+        -12.916818933833559
+      ]
+    }
+  },
+  "version": 0.4
+}
