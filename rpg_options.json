@@ -1,0 +1,91 @@
+{
+  "Gender_Age": {
+    "None": "",
+    "Young Male": "A young male",
+    "Young Female": "A young female",
+    "Middle-Aged Male": "A middle-aged male",
+    "Middle-Aged Female": "A middle-aged female character",
+    "Elder Male": "An elder male",
+    "Elder Female": "An elder female"
+  },
+  "Race": {
+    "None": "",
+    "Human": "Human",
+    "Elf": "Elf",
+    "Dwarf": "Dwarf",
+    "Orc": "Orc",
+    "Dragonborn": "Dragonborn"
+  },
+  "Character_Class": {
+    "None": "",
+    "Warrior": "Warrior",
+    "Mage": "Mage",
+    "Rogue": "Rogue",
+    "Cleric": "Cleric",
+    "Ranger": "Ranger"
+  },
+  "Armor": {
+    "None": "",
+    "Cloth Armor": "Light and flexible armor providing minimal protection but allowing for maximum agility.",
+    "Leather Armor": "Durable armor made of leather, providing a good balance between protection and mobility.",
+    "Padded Armor": "Soft armor made from layers of cloth or quilted materials, providing basic protection against light attacks.",
+    "Hide Armor": "Armor made from the hides of beasts, offering moderate protection while retaining flexibility.",
+    "Studded Leather Armor": "Leather armor reinforced with metal studs, offering enhanced protection without sacrificing too much mobility.",
+    "Scale Mail": "Armor composed of small, overlapping metal scales, offering good protection with some flexibility.",
+    "Chainmail": "Armor made of interlocking metal rings, offering decent protection with moderate weight.",
+    "Splint Armor": "Armor consisting of metal strips attached to a backing of leather or cloth, providing superior protection for limbs.",
+    "Ring Mail": "Armor consisting of leather reinforced with metal rings, offering improved protection over basic leather.",
+    "Breastplate": "A single-piece chest armor made of metal, providing excellent protection to the torso while allowing agility.",
+    "Brigandine": "Armor made of leather or cloth with metal plates sewn inside, providing strong protection with relative flexibility.",
+    "Half Plate": "Armor combining metal plates with chainmail and leather, offering solid protection with reduced weight compared to full plate.",
+    "Plate Armor": "Heavy armor made of metal plates, offering maximum protection at the cost of reduced mobility.",
+    "Full Plate": "Comprehensive armor that covers the entire body with interlocking metal plates, providing the highest level of protection.",
+    "Dragon Scale Armor": "Rare and extremely durable armor made from the scales of a dragon, offering resistance to various elements.",
+    "Mithril Armor": "Lightweight yet strong armor made from mithril, a rare metal, offering high protection with minimal weight.",
+    "Elven Chain": "Exquisite chainmail made by elves, known for its lightness and comfort while providing substantial protection.",
+    "Shadow Armor": "Enchanted armor that enhances stealth and grants the wearer the ability to blend into shadows.",
+    "Battle Mage Armor": "Specialized armor designed for spellcasters, providing both protection and magical enhancements.",
+    "Glass Battle Mage Armor": "Specialized armor designed for spellcasters, providing both protection and magical enhancements.",
+    "Fire-Resistant Armor": "Armor specifically designed to provide resistance against fire-based attacks and environments.",
+    "Iceforged Armor": "Magically imbued armor that provides resistance against cold and ice-based attacks."
+  },
+  "Action": {
+    "None": "",
+    "Attack": "A battle scene",
+    "Defend": "Taking a defensive stance",
+    "Cast Spell": "Casting a magical spell",
+    "Stealth": "Moving silently and unseen",
+    "Heal": "Using healing magic or potion"
+  },
+  "Environment": {
+    "None": "",
+    "Forest": "A dense forest filled with tall trees, undergrowth, and the sounds of wildlife.",
+    "Dungeon": "A dark and foreboding underground dungeon, filled with traps and hidden dangers.",
+    "Castle": "A large stone castle, with towering walls, battlements, and a grand hall.",
+    "Village": "A small, quaint village with rustic cottages, a marketplace, and friendly inhabitants.",
+    "Mountain": "A towering mountain range, with rugged terrain, cliffs, and breathtaking views.",
+    "Swamp": "A murky swamp, with still waters, dense foliage, and the croaking of frogs and insects."
+  },
+  "Creatures": {
+    "None": "",
+    "Wraith": "Wraiths Are ghost-like creatures, often associated with death and darkness, feeding on the life force of others.",
+    "Vampire": "Vampires Are nocturnal undead creature that feeds on the blood of the living.",
+    "Lich": "Lich Are powerful undead sorcerer who has used dark magic to prolong life indefinitely.",
+    "Ghoul": "Ghoul Are undead beings that feed on human flesh, particularly corpses.",
+    "Ghost": "Ghost Are spirit of a deceased person, often bound to a specific location or object.",
+    "Revenant": "Revenants Are reanimated corpses, often returned to the living world to seek vengeance.",
+    "Specter": "Specters Are ghostly apparition, typically haunting a specific place or person.",
+    "Poltergeist": "Poltergeists Are mischievous spirit known for causing physical disturbances.",
+    "Goblin": "Goblins Are small, mischievous creature known for causing trouble and playing pranks.",
+    "Troll": "Trolls Are large, brutish creatures that dwells under bridges or in caves, known for their strength and stupidity.",
+    "Dragon": "Dragons Are large, powerful 4 legged reptilian creatures with 2 wings, often able to breathe fire or other elements.",
+    "Griffin": "Griffins Are mythical creatures with the body of a lion and the head and 2 wings of an eagle.",
+    "Minotaur": "Minotaurs Are creatures with the body of a man and the head of a bull, often found in labyrinths.",
+    "Phoenix": "Phoenix Are legendary birds that are cyclically reborn from its own ashes.",
+    "Banshee": "Banshees Are wailing spirit that herald the death of a loved one.",
+    "Harpy": "Harpies Are creatures with the body of a bird and the face of a woman, known for their shrill cries and vicious temperament.",
+    "Werewolf": "Werewolves Are human cursed to transform into a wolf during a full moon.",
+    "Mermaid": "Mermaids Are creatures with the upper body of a human and the tail of a fish, often found in the sea.",
+    "Cyclops": "Cyclops Are giant with a single eye in the middle of its forehead."
+  }
+}
