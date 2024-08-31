@@ -1,10 +1,16 @@
 {
   "Gender_Age": {
     "None": "",
+    "Young Baby Male": "a young baby male",
+    "Young Baby Female": "a young baby female",
     "Young Male": "A young male",
     "Young Female": "A young female",
+    "Adolescent Male": "an adolescent male",
+    "Adolescent Female": "an adolescent female",
+    "Young Adult Male": "a young adult male",
+    "Young Adult Female": "a young adult female",
     "Middle-Aged Male": "A middle-aged male",
-    "Middle-Aged Female": "A middle-aged female character",
+    "Middle-Aged Female": "A middle-aged female",
     "Elder Male": "An elder male",
     "Elder Female": "An elder female"
   },
@@ -14,15 +20,35 @@
     "Elf": "Elf",
     "Dwarf": "Dwarf",
     "Orc": "Orc",
-    "Dragonborn": "Dragonborn"
+    "Halfling": "Halfling",
+    "Gnome": "Gnome",
+    "Tiefling": "Tiefling",
+    "Aasimar": "Aasimar",
+    "Genasi": "Genasi",
+    "Firbolg": "Firbolg",
+    "Kenku": "Kenku",
+    "Tabaxi": "Tabaxi",
+    "Goliath": "Goliath",
+    "Triton": "Triton",
+    "Kobold": "Kobold",
+    "Aarakocra": "Aarakocra",
+    "Dragonborn": "Dragonborn, a dragon-like humanoid race with scales, known for their draconic ancestry"
   },
-  "Character_Class": {
+  "Character_class": {
     "None": "",
     "Warrior": "Warrior",
     "Mage": "Mage",
     "Rogue": "Rogue",
     "Cleric": "Cleric",
-    "Ranger": "Ranger"
+    "Ranger": "Ranger",
+    "Paladin": "Paladin",
+    "Necromancer": "Necromancer",
+    "Bard": "Bard",
+    "Monk": "Monk",
+    "Druid": "Druid",
+    "Sorcerer": "Sorcerer",
+    "Barbarian": "Barbarian",
+    "Assassin": "Assassin"
   },
   "Armor": {
     "None": "",
@@ -51,11 +77,21 @@
   },
   "Action": {
     "None": "",
-    "Attack": "A battle scene",
-    "Defend": "Taking a defensive stance",
-    "Cast Spell": "Casting a magical spell",
+    "Attack": "in a battle",
+    "Defend": "Taking a defensive stance in battle",
+    "Cast Spell": "Casting a magical spell in battle",
     "Stealth": "Moving silently and unseen",
-    "Heal": "Using healing magic or potion"
+    "Heal": "Using healing magic or potion in battle",
+    "Charge": "Rushing into battle with a powerful, aggressive attack",
+    "Evade": "Skillfully dodging incoming attacks or obstacles",
+    "Sneak Attack": "Performing a surprise attack from the shadows",
+    "Meditate": "Taking a moment to recover energy or focus magical powers",
+    "Disarm": "Attempting to remove an opponent's weapon or disable a trap",
+    "Enrage": "Entering a battle frenzy to increase attack power",
+    "Teleport": "Instantly moving from one location to another through magic",
+    "Summon": "Calling forth creatures or allies to assist in battle",
+    "Enchant": "Using magic to enhance an item or ally’s abilities",
+    "Taunt": "Provoking an enemy to draw their attention and attacks away from allies"
   },
   "Environment": {
     "None": "",
@@ -64,28 +100,16 @@
     "Castle": "A large stone castle, with towering walls, battlements, and a grand hall.",
     "Village": "A small, quaint village with rustic cottages, a marketplace, and friendly inhabitants.",
     "Mountain": "A towering mountain range, with rugged terrain, cliffs, and breathtaking views.",
-    "Swamp": "A murky swamp, with still waters, dense foliage, and the croaking of frogs and insects."
-  },
-  "Creatures": {
-    "None": "",
-    "Wraith": "Wraiths Are ghost-like creatures, often associated with death and darkness, feeding on the life force of others.",
-    "Vampire": "Vampires Are nocturnal undead creature that feeds on the blood of the living.",
-    "Lich": "Lich Are powerful undead sorcerer who has used dark magic to prolong life indefinitely.",
-    "Ghoul": "Ghoul Are undead beings that feed on human flesh, particularly corpses.",
-    "Ghost": "Ghost Are spirit of a deceased person, often bound to a specific location or object.",
-    "Revenant": "Revenants Are reanimated corpses, often returned to the living world to seek vengeance.",
-    "Specter": "Specters Are ghostly apparition, typically haunting a specific place or person.",
-    "Poltergeist": "Poltergeists Are mischievous spirit known for causing physical disturbances.",
-    "Goblin": "Goblins Are small, mischievous creature known for causing trouble and playing pranks.",
-    "Troll": "Trolls Are large, brutish creatures that dwells under bridges or in caves, known for their strength and stupidity.",
-    "Dragon": "Dragons Are large, powerful 4 legged reptilian creatures with 2 wings, often able to breathe fire or other elements.",
-    "Griffin": "Griffins Are mythical creatures with the body of a lion and the head and 2 wings of an eagle.",
-    "Minotaur": "Minotaurs Are creatures with the body of a man and the head of a bull, often found in labyrinths.",
-    "Phoenix": "Phoenix Are legendary birds that are cyclically reborn from its own ashes.",
-    "Banshee": "Banshees Are wailing spirit that herald the death of a loved one.",
-    "Harpy": "Harpies Are creatures with the body of a bird and the face of a woman, known for their shrill cries and vicious temperament.",
-    "Werewolf": "Werewolves Are human cursed to transform into a wolf during a full moon.",
-    "Mermaid": "Mermaids Are creatures with the upper body of a human and the tail of a fish, often found in the sea.",
-    "Cyclops": "Cyclops Are giant with a single eye in the middle of its forehead."
+    "Swamp": "A murky swamp, with still waters, dense foliage, and the croaking of frogs and insects.",
+    "Desert": "A vast expanse of sand dunes under a scorching sun, with mirages in the distance.",
+    "Tundra": "A cold and barren landscape with frozen ground and harsh winds.",
+    "Cave": "A dark, winding network of tunnels and chambers deep underground.",
+    "Ruins": "The crumbling remains of an ancient civilization, filled with hidden traps and secrets.",
+    "City": "A bustling urban environment with towering buildings, narrow alleys, and diverse inhabitants.",
+    "Temple": "A sacred or cursed place of worship, filled with mystical energies and ancient relics.",
+    "Jungle": "A dense, tropical forest with thick underbrush, towering trees, and dangerous wildlife.",
+    "Underwater": "A submerged environment, either in the ocean depths or a sunken city, filled with aquatic life and mysteries.",
+    "Sky City": "A floating city among the clouds, with airships and flying creatures.",
+    "Wasteland": "A desolate, post-apocalyptic environment, with abandoned structures and mutated creatures."
   }
 }

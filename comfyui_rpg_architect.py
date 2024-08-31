@@ -9,13 +9,12 @@ class rpgarchitect:
         return {
             "optional": {
                 "prompt": ("STRING", {"multiline": True}),
-                "Gender_Age": (list(options["Gender_Age"].keys()),),  # Ensure consistent naming
+                "Gender_Age": (list(options["Gender_Age"].keys()),),
                 "Race": (list(options["Race"].keys()),),
-                "Character_Class": (list(options["Character_Class"].keys()),),  # Corrected naming to match JSON
+                "Character_class": (list(options["Character_class"].keys()),),
                 "Armor": (list(options["Armor"].keys()),),
                 "Action": (list(options["Action"].keys()),),
-                "Environment": (list(options["Environment"].keys()),),
-                "Creatures": (list(options["Creatures"].keys()),)
+                "Environment": (list(options["Environment"].keys()),)
             },
         }
 
@@ -26,35 +25,41 @@ class rpgarchitect:
     @staticmethod
     def load_options():
         # Load the JSON file containing the options and prompts
-        json_path = os.path.join(os.path.dirname(__file__), "RPG_options.json")
+        json_path = os.path.join(os.path.dirname(__file__), "rpg_options.json")
         if not os.path.exists(json_path):
             raise FileNotFoundError(f"Options file not found: {json_path}")
 
         with open(json_path, 'r') as file:
             return json.load(file)
 
-    def generate_prompt(self, prompt, Gender_Age, Race, Character_Class, Armor, Action, Environment, Creatures):
+    def generate_prompt(self, prompt=None, Gender_Age=None, Race=None, Character_class=None, Armor=None, Action=None, Environment=None):
         options = self.load_options()
-        
+
+        # Use provided options or default to 'None' if not specified
+        Gender_Age = Gender_Age or "None"
+        Race = Race or "None"
+        Character_class = Character_class or "None"
+        Armor = Armor or "None"
+        Action = Action or "None"
+        Environment = Environment or "None"
+
         # Concatenate the prompts for each selected option
         prompt_parts = [
             part for part in [
-                prompt,
-                options["Gender_Age"].get(Gender_Age, ""),  # Ensure consistent naming
+                prompt if prompt else "",
+                options["Gender_Age"].get(Gender_Age, ""),
                 options["Race"].get(Race, ""),
-                options["Character_Class"].get(Character_Class, ""),
+                options["Character_class"].get(Character_class, ""),
                 options["Armor"].get(Armor, ""),
                 options["Action"].get(Action, ""),
-                options["Environment"].get(Environment, ""),
-                options["Creatures"].get(Creatures, "")
-            ] if part.strip() != ""
+                options["Environment"].get(Environment, "")
+            ] if part and part.strip()
         ]
         
         # Join the prompt parts with periods
         final_prompt = ". ".join(prompt_parts)
         
         return ("24K UHD Photograph of " + final_prompt,)
-
 
 # Node class mappings
 NODE_CLASS_MAPPINGS = {
