@@ -18,3 +18,14 @@ Future updates
 This node will be updated regularly so check back for new features.
 
 Please leave a star if you like my work. And comments/Suggestions are always welcome!
+
+August 31 2024
+
+This update is removing the creatures option from the node (Will be added as a separate node).
+Expanded the options in each category to include more choices.
+
+Future Updates
+Creature node addition.
+Random Character creation option
+Additions of weapons and Shields
+  
